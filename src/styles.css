@@ -1,1 +1,112 @@
-/* You can add global styles to this file, and also import other style files */
+*
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/*cabecera*/
+#cabecera
+{
+    width: 100%;
+    height: 60px;
+    background-color: deepskyblue;
+}
+
+#logo
+{
+    width: 20%;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 54px;
+    color: white;
+    font-size: x-large;
+    text-align: center;
+    font-style: oblique;
+}
+
+
+/*formulario*/
+
+#ContenedorAgregar
+{
+    margin: 0px auto;
+    margin-top: 50px;
+    width: 50%;
+    height: 500px;
+    box-shadow: 0px 0px 5px gray inset;
+}
+
+
+#titulo
+{
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: deepskyblue;
+    
+}
+
+
+#ContenedorAgregar h1
+{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    color: white;
+}
+
+
+#Formulario
+{
+    width: 80%;
+    height: 70%;
+    margin: 0px auto;
+    margin-top: 40px;
+}
+
+#Formulario input[type="text"],
+#Formulario input[type="number"]
+{
+    width: 80%;
+    height: 40px;
+    margin: 17px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    margin-left: 56px;
+}
+
+button
+{
+    width: 218px;
+    height: 45px;
+    margin-left: 55px;
+    cursor: pointer;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+}
+
+#btnGuardar
+{
+    background-color: deepskyblue;
+    
+    
+}
+
+#btnEliminar
+{
+    background-color: rgb(228, 47, 47);
+ 
+}
+
+#btnGuardar:hover
+{
+    background-color: rgb(66, 175, 211);
+    
+}
+
+#btnEliminar:hover
+{
+    background-color: rgb(172, 16, 16);
+}
