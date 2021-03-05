@@ -5,9 +5,17 @@
 
 </header>
 
+
+<div class="Caja">
+
+  Ver Empleados
+
+</div>
+
+
 <div id="ContenedorAgregar">
 
-  <div id="titulo">
+  <div class="titulo">
     <h1>Agregar Empleado</h1>
   </div>
   
@@ -15,13 +23,29 @@
   <form id="Formulario">
     <p><input type="text" placeholder="Nombre"/></p> 
     <p><input type="text" placeholder="apellido"/></p> 
-    <p><input type="text" placeholder="telefono"/></p> 
+    <p><input type="number" placeholder="edad"/></p> 
     <p><input type="number" placeholder="sueldo"/></p> 
 
     <button id="btnGuardar">Guardar</button>
     <button id="btnEliminar">Eliminar</button>
   </form>
- 
+   
+</div>
 
-  
+
+<div id="cajaEmpleados">
+  <div class="titulo">
+    <h1>Lista de Empleados</h1>
+  </div>
+
+  <div id="cajaListaEmpleados" *ngIf="empleados">
+      <ul>
+        <li *ngFor="let empleado of empleados" >
+           {{empleado.id}}
+           {{empleado.nombre}}
+
+        </li>
+      </ul>
+  </div>
+
 </div>

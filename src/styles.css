@@ -30,15 +30,26 @@
 
 #ContenedorAgregar
 {
+    display: none;
     margin: 0px auto;
-    margin-top: 50px;
+    margin-top: 100px;
+    width: 50%;
+    height: 500px;
+    box-shadow: 0px 0px 5px gray inset;
+}
+
+#cajaEmpleados
+{
+    
+    margin: 0px auto;
+    margin-top: 100px;
     width: 50%;
     height: 500px;
     box-shadow: 0px 0px 5px gray inset;
 }
 
 
-#titulo
+.titulo
 {
     width: 100%;
     height: 60px;
@@ -48,7 +59,7 @@
 }
 
 
-#ContenedorAgregar h1
+h1
 {
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
@@ -109,4 +120,61 @@ button
 #btnEliminar:hover
 {
     background-color: rgb(172, 16, 16);
+}
+
+
+
+.Caja
+{
+    width: 190px;
+    height: 47px;
+    border: 1px solid deepskyblue;
+    position: absolute;
+    left: 385px;
+    top: 112px;
+    text-align: center;
+    line-height: 47px;
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+.Caja:hover
+{
+    text-decoration: underline;
+}
+
+
+/*caja empleado*/
+
+#cajaListaEmpleados
+{
+    width: 100%;
+    height: 88%;
+   
+    
+}
+
+#cajaListaEmpleados ul
+{
+    width: 100%;
+    height: 100%;
+    list-style: none;
+}
+
+#cajaListaEmpleados ul li
+{
+    width: 97%;
+    height: 70px;
+    line-height: 70px;
+    background-color: black;
+    color: white;
+    text-align: left;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 13px;
+    font-size: 17px;
+    font-family: 'Times New Roman', Times, serif;
 }
