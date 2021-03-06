@@ -30,7 +30,7 @@
 
 #ContenedorAgregar
 {
-    display: none;
+    
     margin: 0px auto;
     margin-top: 100px;
     width: 50%;
@@ -138,12 +138,17 @@ button
     font-family: 'Times New Roman', Times, serif;
     cursor: pointer;
     background-color: black;
-    color: white;
+    color: #333;
+}
+
+#verAgregarEmpleado
+{
+    display: none;
 }
 
 .Caja:hover
 {
-    text-decoration: underline;
+    color: white;
 }
 
 
@@ -153,6 +158,7 @@ button
 {
     width: 100%;
     height: 88%;
+    overflow: auto;
    
     
 }
@@ -162,6 +168,7 @@ button
     width: 100%;
     height: 100%;
     list-style: none;
+   
 }
 
 #cajaListaEmpleados ul li
@@ -173,8 +180,37 @@ button
     color: white;
     text-align: left;
     margin: 10px;
+    margin-top: 17px;
     cursor: pointer;
-    border-radius: 13px;
-    font-size: 17px;
+    font-size: 20px;
     font-family: 'Times New Roman', Times, serif;
+    text-align: left;
 }
+
+#cajaListaEmpleados ul li:hover
+{
+    background-color: deepskyblue;
+    color: black;
+}
+
+#cajaListaEmpleados ul li:hover #cajaId
+{
+    background-color: white;
+}
+
+#cajaId
+{
+    display: block;
+    width: 24px;
+    height: 27px;
+    background-color: rgb(16, 120, 155);
+    float: left;
+    margin: 5px;
+    margin-left: 5px;
+    margin-top: 21px;
+    line-height: 27px;
+    text-align: center;
+    margin-left: 15px;
+   
+}
+

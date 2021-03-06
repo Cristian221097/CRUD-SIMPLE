@@ -6,9 +6,15 @@
 </header>
 
 
-<div class="Caja">
+<div id="verEmpleado" class="Caja" (click)="presentarEmpleado()">
 
   Ver Empleados
+
+</div>
+
+<div id="verAgregarEmpleado" class="Caja" (click)="vistaAgregarEmpleado()">
+
+  Agregar Empleado
 
 </div>
 
@@ -21,13 +27,13 @@
   
 
   <form id="Formulario">
-    <p><input type="text" placeholder="Nombre"/></p> 
-    <p><input type="text" placeholder="apellido"/></p> 
-    <p><input type="number" placeholder="edad"/></p> 
-    <p><input type="number" placeholder="sueldo"/></p> 
+    <p><input type="text" placeholder="Nombre"  name="nombre"  [(ngModel)]="empleadoSeleccionado.nombre"/></p> 
+    <p><input type="text" placeholder="apellido"  name="apellido" [(ngModel)]="empleadoSeleccionado.apellido"/></p> 
+    <p><input type="number" placeholder="edad"  name="edad" [(ngModel)]="empleadoSeleccionado.edad"/></p> 
+    <p><input type="number" placeholder="sueldo" name="sueldo"  [(ngModel)]="empleadoSeleccionado.sueldo"/></p> 
 
-    <button id="btnGuardar">Guardar</button>
-    <button id="btnEliminar">Eliminar</button>
+    <button id="btnGuardar" (click)="guardarEditarEmpleado()">Guardar</button>
+    <button id="btnEliminar" (click)="eliminarEmpleado()" *ngIf="empleadoSeleccionado.id !=0">Eliminar</button>
   </form>
    
 </div>
@@ -40,9 +46,16 @@
 
   <div id="cajaListaEmpleados" *ngIf="empleados">
       <ul>
-        <li *ngFor="let empleado of empleados" >
-           {{empleado.id}}
+        <li *ngFor="let empleado of empleados" (click)="clickListaEmpleado(empleado)">
+        <span id="cajaId" >
+          {{empleado.id}}
+        </span> 
            {{empleado.nombre}}
+           {{empleado.apellido}}
+           {{empleado.edad + " " + "Años"}}
+           {{empleado.sueldo + "$"}}
+
+
 
         </li>
       </ul>

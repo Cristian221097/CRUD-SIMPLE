@@ -15,6 +15,67 @@ export class AppComponent {
 
   ];
 
+  empleadoSeleccionado:Empleado = new Empleado();
+
+  guardarEditarEmpleado()
+  {
+    if(this.empleadoSeleccionado.id == 0 ){
+      this.empleadoSeleccionado.id = this.empleados.length + 1;
+      this.empleados.push(this.empleadoSeleccionado);
+
+    }
+   
+    this.empleadoSeleccionado = new Empleado();
+    
+  }
+
+  eliminarEmpleado(){
+
+    if(confirm("estas seguro de borrar este empleado?")){
+      this.empleados = this.empleados.filter(x => x !=this.empleadoSeleccionado);
+      this.empleadoSeleccionado =  new Empleado();
+
+    }
+
+   
+  }
+
+  clickListaEmpleado(empleado)
+  {
+
+    this.empleadoSeleccionado = empleado;
+
+    let verAgregarEmpleado = document.getElementById('verAgregarEmpleado');
+    let contenedorAgregar = document.getElementById('ContenedorAgregar');
+
+    contenedorAgregar.style.display = "block";
+    verAgregarEmpleado.style.display = "none";
+
+
+
+  }
+
+
+  presentarEmpleado(){
+    let contenedorAgregar = document.getElementById('ContenedorAgregar');
+    let verAgregarEmpleado = document.getElementById('verAgregarEmpleado');
+
+    contenedorAgregar.style.display = "none";
+    verAgregarEmpleado.style.display = "block";
+  }
+
+  vistaAgregarEmpleado()
+  { 
+    let contenedorAgregar = document.getElementById('ContenedorAgregar');
+    let verAgregarEmpleado = document.getElementById('verAgregarEmpleado');
+
+    contenedorAgregar.style.display = "block";
+    verAgregarEmpleado.style.display = "none";
+
+  }
+
+
+
  
 
 
