@@ -40,7 +40,7 @@
 
 #cajaEmpleados
 {
-    
+    display: none;   
     margin: 0px auto;
     margin-top: 100px;
     width: 50%;
@@ -156,6 +156,7 @@ button
 
 #cajaListaEmpleados
 {
+    
     width: 100%;
     height: 88%;
     overflow: auto;
@@ -212,5 +213,20 @@ button
     text-align: center;
     margin-left: 15px;
    
+}
+
+/* buscar empleado*/
+#buscarEmpleado
+{
+    display: none;
+    float: right;
+    width: 26%;
+    height: 35px;
+    margin-top: -49px;
+    margin-right: 40px;
+    font-size: 17px;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+
 }
 

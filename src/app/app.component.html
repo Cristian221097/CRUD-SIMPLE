@@ -1,7 +1,9 @@
 <header id="cabecera">
   <div id="logo">
     CRUD ANGULAR
-  </div>  
+  </div>
+  
+  <input id="buscarEmpleado" [(ngModel)]="filtro" type="text" placeholder="buscar Empleado"/>
 
 </header>
 
@@ -46,7 +48,7 @@
 
   <div id="cajaListaEmpleados" *ngIf="empleados">
       <ul>
-        <li *ngFor="let empleado of empleados" (click)="clickListaEmpleado(empleado)">
+        <li *ngFor="let empleado of empleados | busqueda:filtro" (click)="clickListaEmpleado(empleado)">
         <span id="cajaId" >
           {{empleado.id}}
         </span> 

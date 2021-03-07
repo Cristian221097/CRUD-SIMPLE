@@ -7,6 +7,7 @@ import {Empleado} from './Modelos/empleado';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  public filtro="";
   
   public empleados:Empleado[]=[
     {id:1,nombre:'Cristian',apellido:'Amancio',edad:23,sueldo:5000},
@@ -44,12 +45,15 @@ export class AppComponent {
   {
 
     this.empleadoSeleccionado = empleado;
-
+    let buscador = document.getElementById('buscarEmpleado');
     let verAgregarEmpleado = document.getElementById('verAgregarEmpleado');
     let contenedorAgregar = document.getElementById('ContenedorAgregar');
+    let cajaEmpleados = document.getElementById('cajaEmpleados');
 
     contenedorAgregar.style.display = "block";
     verAgregarEmpleado.style.display = "none";
+    buscador.style.display = "none";
+    cajaEmpleados.style.display = "none";
 
 
 
@@ -59,18 +63,26 @@ export class AppComponent {
   presentarEmpleado(){
     let contenedorAgregar = document.getElementById('ContenedorAgregar');
     let verAgregarEmpleado = document.getElementById('verAgregarEmpleado');
+    let buscador = document.getElementById('buscarEmpleado');
+    let cajaEmpleados = document.getElementById('cajaEmpleados');
 
     contenedorAgregar.style.display = "none";
     verAgregarEmpleado.style.display = "block";
+    buscador.style.display = "block";
+    cajaEmpleados.style.display = "block";
   }
 
   vistaAgregarEmpleado()
   { 
+    let buscador = document.getElementById('buscarEmpleado');
     let contenedorAgregar = document.getElementById('ContenedorAgregar');
     let verAgregarEmpleado = document.getElementById('verAgregarEmpleado');
+    let cajaEmpleados = document.getElementById('cajaEmpleados');
 
     contenedorAgregar.style.display = "block";
     verAgregarEmpleado.style.display = "none";
+    buscador.style.display = "none";
+    cajaEmpleados.style.display = "none";
 
   }
 
