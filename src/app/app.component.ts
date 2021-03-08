@@ -27,6 +27,8 @@ export class AppComponent {
     }
    
     this.empleadoSeleccionado = new Empleado();
+
+    alert("Guardado...");
     
   }
 
@@ -41,7 +43,7 @@ export class AppComponent {
    
   }
 
-  clickListaEmpleado(empleado)
+  clickListaEmpleado(empleado:Empleado)
   {
 
     this.empleadoSeleccionado = empleado;
@@ -54,6 +56,7 @@ export class AppComponent {
     verAgregarEmpleado.style.display = "none";
     buscador.style.display = "none";
     cajaEmpleados.style.display = "none";
+
 
 
 
